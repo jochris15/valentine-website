@@ -5,12 +5,19 @@ const MessageCard = () => {
     const [fade, setFade] = useState(false);
 
     const loveNotes = [
-        "You make my heart smile 💕",
-        "Every day with you is a blessing 🥰",
-        "You're my sunshine, my only sunshine ☀️",
-        "You're my favorite notification 📱",
-        "You're voice is my favorite sound 🎶",
-        "You're my favorite hello and hardest goodbye 👋",
+        "Are you a magician? Because whenever I look at you, everyone else disappears!",
+        "I must be a snowflake because I’ve fallen for you!",
+        "Is your name Google? Because you've got everything I've been searching for!",
+        "If you were a vegetable, you'd be a cute-cumber!",
+        "Are you tired? Because you've been running through my mind all day. And probably all night too.",
+        "Do you have a map? Because I keep getting lost in your eyes.",
+        "If you were a superhero, what would your power be? My guess is making me smile",
+        "Are you a time traveler? Because you make every moment feel special",
+        "If bring treats, will Maple let me hang out with you?",
+        "I'm not sure what's sweeter, you or Lessy's puppy dog eyes.",
+        "I'm not sure if I'm more excited to see you or Maple. Just kidding...mostly.",
+        "I'm not sure who's cuter, you or Lessy. It's a tough call.",
+        "I'm barking mad about you...just like Lessy when she sees a cat."
     ];
 
     const revealMessage = () => {
@@ -23,8 +30,8 @@ const MessageCard = () => {
     };
 
     return (
-        <div className="p-6 rounded-lg text-center">
-            <p className={`text-lg font-semibold mb-4 ${fade ? 'fade-in' : 'fade-out'}`}>
+        <div className="p-6 rounded-lg text-center lg:w-1/4">
+            <p className={`text-lg font-semibold mb-6 ${fade ? 'fade-in' : 'fade-out'}`}>
                 {message}
             </p>
             <button

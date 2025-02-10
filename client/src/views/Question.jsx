@@ -1,31 +1,18 @@
 import { useState } from "react";
 import { useNavigate } from "react-router";
 import corgiAsk from '../assets/corgiAsk.webp'
-import { useRef } from 'react';
-import openAudio from '../assets/christina perri - you are my sunshine.mp3'
 
 function Question() {
     const navigate = useNavigate()
     const [yesButtonSize, setYesButtonSize] = useState(1);
-    const audioRef = useRef(null);
 
     const handleNoClick = () => {
         setYesButtonSize((prevSize) => prevSize + 1);
     };
 
-    const handleCardClick = () => {
-        navigate("/valentine")
-        if (!audioRef.current) {
-            audioRef.current = new Audio(openAudio);
-            audioRef.current.play();
-        } else if (audioRef.current.paused) {
-            audioRef.current.play();
-        }
-    };
-
     return (
         <div className="flex flex-col items-center justify-center min-h-screen p-12">
-            <h1 className="text-2xl font-bold text-red-600 mb-8 text-center">
+            <h1 className="text-2xl font-bold text-red-600 mb-5 text-center">
                 Will you be my Valentine? ❤️
             </h1>
             <img className="w-4/6 lg:w-1/6 mb-14 mt-5"
@@ -34,7 +21,7 @@ function Question() {
                 <button
                     style={{ transform: `scale(${yesButtonSize})` }}
                     className="bg-red-600 text-white font-semibold py-4 px-8 rounded-lg transition-transform duration-300"
-                    onClick={handleCardClick}
+                    onClick={() => navigate("/valentine")}
                 >
                     Yes
                 </button>
