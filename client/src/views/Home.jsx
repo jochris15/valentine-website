@@ -20,7 +20,7 @@ function Home() {
             <audio ref={audioRef} src={openAudio} autoPlay loop />
             <button
                 onClick={handleMuteClick}
-                className="absolute bottom-8 right-4"
+                className="absolute bottom-4 right-4"
             >
                 {isMuted ? (
                     <>
