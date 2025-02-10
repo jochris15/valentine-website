@@ -11,7 +11,7 @@ function Question() {
     };
 
     return (
-        <div className="flex flex-col items-center justify-center min-h-screen p-12">
+        <div className="flex flex-col items-center justify-center h-screen p-12">
             <h1 className="text-2xl font-bold text-red-600 mb-5 text-center">
                 Will you be my Valentine? ❤️
             </h1>
