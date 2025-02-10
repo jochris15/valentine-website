@@ -1,8 +1,8 @@
 import { useState } from "react";
 import { useNavigate } from "react-router";
-import cardOpenSound from '../assets/cardOpen.mp3';
 import corgiAsk from '../assets/corgiAsk.webp'
 import { useRef } from 'react';
+import openAudio from '../assets/christina perri - you are my sunshine.mp3'
 
 function Question() {
     const navigate = useNavigate()
@@ -16,7 +16,7 @@ function Question() {
     const handleCardClick = () => {
         navigate("/valentine")
         if (!audioRef.current) {
-            audioRef.current = new Audio(cardOpenSound);
+            audioRef.current = new Audio(openAudio);
             audioRef.current.play();
         } else if (audioRef.current.paused) {
             audioRef.current.play();
