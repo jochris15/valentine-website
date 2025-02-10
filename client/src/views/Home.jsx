@@ -15,12 +15,12 @@ function Home() {
     };
 
     return (
-        <div className="min-h-screen flex flex-col items-center justify-center text-gray-800 relative">
+        <div className="min-h-screen flex flex-col items-center justify-center text-gray-800">
             <h1 className="text-2xl font-bold text-red-600 text-center mb-5">Happy Valentine’s Day</h1>
             <audio ref={audioRef} src={openAudio} autoPlay loop />
             <button
                 onClick={handleMuteClick}
-                className="absolute bottom-8 right-4"
+                className="absolute bottom-10 lg:right-12 right-10"
             >
                 {isMuted ? (
                     <>
